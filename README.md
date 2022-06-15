@@ -1,4 +1,4 @@
-# Learning-Procees
+# Learning-Process
 June - 2022
 Focus to learn JavaScript 
 
