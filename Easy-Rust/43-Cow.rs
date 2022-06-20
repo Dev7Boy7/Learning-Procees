@@ -43,7 +43,7 @@ fn main() {
 
 
 // Reddit 
-My main use case for `Cow` is avoiding (string) copies. Consider
+// My main use case for `Cow` is avoiding (string) copies. Consider
 
 fn how_many_potions(num: usize) -> std::borrow::Cow<'static, str> {
     match num {
