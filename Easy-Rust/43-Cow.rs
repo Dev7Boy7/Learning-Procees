@@ -52,7 +52,7 @@ fn how_many_potions(num: usize) -> std::borrow::Cow<'static, str> {
         _ => format!("{} potions remaining", num).into()
     }
 }
-Essentially, we want to return a String here, but there are cases in which we can do better because we actually have a &'static str containing the data, so we don't need to allocate and copy a brand new String for this purpose.
+// Essentially, we want to return a String here, but there are cases in which we can do better because we actually have a &'static str containing the data, so we don't need to allocate and copy a brand new String for this purpose.
 
-This is exactly what Cow is for.
+// This is exactly what Cow is for.
 
