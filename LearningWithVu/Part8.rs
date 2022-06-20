@@ -1,4 +1,4 @@
-<!-- https://www.youtube.com/watch?v=e6LZKxU5mjI&list=PLFnEYduGTiXE2ejxmzTIraP2feI-pmeuw&index=9 -->
+// https://www.youtube.com/watch?v=e6LZKxU5mjI&list=PLFnEYduGTiXE2ejxmzTIraP2feI-pmeuw&index=9
 
 // Rust không phải là ngôn ngữ lập trình hướng đối tượng
 
