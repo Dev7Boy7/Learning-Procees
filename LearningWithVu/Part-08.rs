@@ -4,6 +4,8 @@
 
 // Trait giúp tạo ra 1 nhóm chức năng có thể áp dụng cho nhiều Struct cùng đặc điểm.
 
+//---------------------------------------------------------------------------------------------
+
 struct Data {
     number1: u32,
     number2: i32,
