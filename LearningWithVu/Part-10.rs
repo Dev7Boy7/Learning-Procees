@@ -1,33 +1,33 @@
 // https://www.youtube.com/watch?v=JxA2Y0G80sg&list=PLFnEYduGTiXE2ejxmzTIraP2feI-pmeuw&index=11
 
 // Error handle & result
+
 // result và Option được sử dụng rất nhiều 
 
+//--------------------------------------------------------------------------------------------------
 
-// fn main() {
-//     panic!("nguyencaotri");
-// }
-// => thread 'main' panicked at 'nguyencaotri', src\main.rs:6:5
+fn main() {
+    panic!("nguyencaotri");
+}
+=> thread 'main' panicked at 'nguyencaotri', src\main.rs:6:5
 
-
-// enum Result <T, E> {
-//     Ok(T),
-//     Err(E),
-// }
-// T đại diện cho 1 kiểu dữ liệu bất kì
-// Vd:
-// fn try_login() -> Result<i32, String> {
-//     Ok(1),
-//     Err(String::from("denied"))
-// }
-
+enum Result <T, E> {
+    Ok(T),
+    Err(E),
+}
+T đại diện cho 1 kiểu dữ liệu bất kì
+Vd:
+fn try_login() -> Result<i32, String> {
+    Ok(1),
+    Err(String::from("denied"))
+}
 
 //Result giúp hạn chế sử dụng if/else
-
 
 // Authentucation - xác minh
 // Authorization - quyền truy cập
 
+//---------------------------------------------------------------------------
 
 struct Emloyee {
     position: Position,
