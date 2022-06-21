@@ -19,4 +19,4 @@ fn main () {
 
 // todo!() // todo means "I will do it later, please be quiet"
 
-//todo!() is actually the same as another macro: unimplemented!(). Programmers were using unimplemented!() a lot but it was long to type, so they created todo!() which is shorter
+// todo!() is actually the same as another macro: unimplemented!(). Programmers were using unimplemented!() a lot but it was long to type, so they created todo!() which is shorter
