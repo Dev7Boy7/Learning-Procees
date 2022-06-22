@@ -1,28 +1,30 @@
 // Closures in functions
 
-// fn main() {
-//     fn all<F> (&mut self, f: F) -> bool    // f: F maybe change my_closure: Closure
-//     where 
-//         F: Fnmut(self::Item) -> bool,
-// }
+fn main() {
+    fn all<F> (&mut self, f: F) -> bool    // f: F maybe change my_closure: Closure
+    where 
+        F: Fnmut(self::Item) -> bool,
+}
 
 // Simple signature with a closure 
 
-// fn do_something <F> (f: F)
-// where 
-//     F: FnOnce(),
-// { 
-//     f();
-// }
+fn do_something <F> (f: F)
+where 
+    F: FnOnce(),
+{ 
+    f();
+}
 
-// fn main() {
-//     let some_vec = vec![9,8,10];
-//     do_something(|| {
-//         some_vec
-//             .into_iter()
-//             .for_each(|x| println!("The number is : {}", x));
-//     })
-// }
+fn main() {
+    let some_vec = vec![9,8,10];
+    do_something(|| {
+        some_vec
+            .into_iter()
+            .for_each(|x| println!("The number is : {}", x));
+    })
+}
+
+//---------------------------------------------------------------------------------------------
 
 #[derive(Debug)]
 struct City {
@@ -84,5 +86,10 @@ fn main() {
     });
 
     println!("Du lieu hien tai {:?}", hochiminh_city);
-
 }
+
+
+
+
+
+
