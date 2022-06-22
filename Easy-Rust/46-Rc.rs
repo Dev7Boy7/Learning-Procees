@@ -3,7 +3,7 @@
 
 // Mỗi variable chỉ có thể 1 chủ sở hữu 
 
-//Rc writes down who has ownership, and how many 
+// Rc writes down who has ownership, and how many 
 
 #[derive(Debug)]
 struct quan_huyen {
