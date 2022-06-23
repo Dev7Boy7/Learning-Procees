@@ -1,90 +1,92 @@
 
-// fn caps(input: &str) -> String {
-//     input.to_uppercase()
-// }
-// fn main() {}
+fn caps(input: &str) -> String {
+    input.to_uppercase()
+}
+fn main() {}
 
-// #[cfg(test)]
-// mod test {
-//     use crate::*;
+#[cfg(test)]
+mod test {
+    use crate::*;
 
-//     #[test]
-//     fn check() {
-//         let result = caps("nguyen cao tri");
-//         let expected = String::from("NGUYEN CAO TRI");
-//         assert_eq!(result, expected, "String should be all uppercase");
-//     }
+    #[test]
+    fn check() {
+        let result = caps("nguyen cao tri");
+        let expected = String::from("NGUYEN CAO TRI");
+        assert_eq!(result, expected, "String should be all uppercase");
+    }
 
-//     // fn check_uppercase() {
-//     //     let result = caps("le xuan tien");
-//     //     let expected = String::from("LE XUAN TIEN");
-//     //     assert_eq!(result, expected, "string should be all uppercase");
-//     // }
-// }
+    // fn check_uppercase() {
+    //     let result = caps("le xuan tien");
+    //     let expected = String::from("LE XUAN TIEN");
+    //     assert_eq!(result, expected, "string should be all uppercase");
+    // }
+}
+
+//-----------------------------------------------------------------------------------
 
 // INPUT / OUTPUT
 
-//
+//------------------------------------------------------------------------------------
 
-// fn main() {
-//     let abc = vec![1,2,3,4,5];
+fn main() {
+    let abc = vec![1,2,3,4,5];
 
-//     let mut aaa = vec![];
+    let mut aaa = vec![];
 
-//     for number in abc {
-//         aaa.push(number+1);
-//         println!("number la : {}", number);
-//     }
+    for number in abc {
+        aaa.push(number+1);
+        println!("number la : {}", number);
+    }
 
-//     println!("Vector moi la : {:?}", aaa)
-// }
+    println!("Vector moi la : {:?}", aaa)
+}
 
 //------------------------------------------------------------------------------------
 
-// fn main() {
-//     let acb = vec![1,2,3,4,5];
+fn main() {
+    let acb = vec![1,2,3,4,5];
 
-//     let aaa = acb
-//                     .iter() 
-//                     .map( |x| {
-//                         println!("number la: {}", x);
-//                         x+1
-//                     })
-//                     .collect::<Vec<i32>>();
+    let aaa = acb
+                    .iter() 
+                    .map( |x| {
+                        println!("number la: {}", x);
+                        x+1
+                    })
+                    .collect::<Vec<i32>>();
 
-//     println!("Vector moi la : {:?}", aaa)
-// }
+    println!("Vector moi la : {:?}", aaa)
+}
 
 //------------------------------------------------------------------------------------
 
-// fn main() {
-//     let acb = vec![1,2,3,4,5];
+fn main() {
+    let acb = vec![1,2,3,4,5];
 
-//     let aaa = acb
-//                 .iter()
-//                 .map( |x| x * 2 )
-//                 .filter(|x| x > &6)
-//                 .collect::<Vec<i32>>();
+    let aaa = acb
+                .iter()
+                .map( |x| x * 2 )
+                .filter(|x| x > &6)
+                .collect::<Vec<i32>>();
 
-//     println!("{:?}", aaa)
-// }
+    println!("{:?}", aaa)
+}
 
 //--------------------------------------------------------------------------------------
 
 // Closure 
 
-// fn main() {
-//     let cong2so = |x : i32, y: i32| x+y ;
+fn main() {
+    let cong2so = |x : i32, y: i32| x+y ;
 
-//     let abc = cong2so(2,5);
+    let abc = cong2so(2,5);
 
-//     let aaa = |x,y,z| x + y+ z;
+    let aaa = |x,y,z| x + y+ z;
 
-//     println!("{}", abc);
+    println!("{}", abc);
 
-//     println!("{}", aaa(10,10,20));
+    println!("{}", aaa(10,10,20));
 
-// }
+}
 
 //------------------------------------------------------------------------------------------
 
@@ -101,5 +103,10 @@ fn main(){
 
     println!("{}", math(2,3,add));
     println!("{}", math(2,6,multi));
-
 }
+
+
+
+
+
+
