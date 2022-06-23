@@ -1,56 +1,56 @@
 
-
 // Impl Trait
 
 // impl Trait tương tự như generic 
 
-// fn so_sanh_2soduong(so_thu_nhat: u8, so_thu_hai: u8) -> u8{
-//     let so_lon_hon = if so_thu_nhat>so_thu_hai {so_thu_nhat} else {so_thu_hai};
-//     so_lon_hon
-// }
-//
-// fn main() {
-//     println!("So lon hon la : {}", so_sanh_2soduong(100, 50));
-// }
+fn so_sanh_2soduong(so_thu_nhat: u8, so_thu_hai: u8) -> u8{
+    let so_lon_hon = if so_thu_nhat>so_thu_hai {so_thu_nhat} else {so_thu_hai};
+    so_lon_hon
+}
+
+fn main() {
+    println!("So lon hon la : {}", so_sanh_2soduong(100, 50));
+}
 
 //-----------------------------------------------------------------------------------------------
 
 // remember PartialOrd - Display 
 
-// use std::fmt::Display;
+use std::fmt::Display;
 
-// fn so_sanh_2so <T: PartialOrd + Display >(so_thu_nhat: T, so_thu_hai: T) -> T{
-//     let so_lon_hon = if so_thu_nhat>so_thu_hai {so_thu_nhat} else {so_thu_hai};
-//     so_lon_hon
-// }
-//
-// fn main() {
-//     println!("So lon hon la : {}", so_sanh_2so(-1007.321, -501.3123));
-// }
+fn so_sanh_2so <T: PartialOrd + Display >(so_thu_nhat: T, so_thu_hai: T) -> T{
+    let so_lon_hon = if so_thu_nhat>so_thu_hai {so_thu_nhat} else {so_thu_hai};
+    so_lon_hon
+}
+
+fn main() {
+    println!("So lon hon la : {}", so_sanh_2so(-1007.321, -501.3123));
+}
 
 //-----------------------------------------------------------------------------------------------
 
 // Giờ ta tương tự nhìn vào impl Trait . thay vì dùng T , ta có thể mang loại impl Trait 
 
-// fn print_it (input: impl Into<String> + std::fmt::Display) {
-//     println!("You can print mmmmmany things, including {}", input);
-// }
+fn print_it (input: impl Into<String> + std::fmt::Display) {
+    println!("You can print mmmmmany things, including {}", input);
+}
 
-// fn main() {
-//     let name = "nguyen cao tri";
+fn main() {
+    let name = "nguyen cao tri";
 
-//     let number1 = 909608777;
+    let number1 = 909608777;
 
-//     let string_name = "Nguyen Cao Tri".to_string();
+    let string_name = "Nguyen Cao Tri".to_string();
 
-//     print_it(name);
+    print_it(name);
 
-//     print_it(string_name);
-// }
+    print_it(string_name);
+}
 
 //----------------------------------------------------------------------------------------------------
 
 // Tương tự trong sách , ta sẽ viết 1 đoạn code về sự thay đổi khả năng học tập theo từng thời điểm trong ngày f64, sẽ tăng lên vào đêm ...
+
 enum TimeOfDay {
     morning,
     afternoon,
@@ -91,4 +91,10 @@ fn main() {
 
     learning_ability_base = evening(learning_ability_base);
 }
+
+
+
+
+
+
 
