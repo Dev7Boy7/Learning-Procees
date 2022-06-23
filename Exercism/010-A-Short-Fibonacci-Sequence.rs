@@ -1,0 +1,39 @@
+/// Create an empty vector
+pub fn create_empty() -> Vec<u8> {
+    vec![]
+}
+
+/// Create a buffer of `count` zeroes.
+///
+/// Applications often use buffers when serializing data to send over the network.
+/// 
+/// My
+pub fn create_buffer(count: usize) -> Vec<u8> {
+    println!("create a zeroized buffer of {} bytes", count);
+    let mut abc = vec![];
+    let mut aaa = 0;
+    while aaa < count {
+        abc.push(0);
+        aaa += 1;
+    }
+    abc
+}
+///
+pub fn create_buffer(count: usize) -> Vec<u8> {
+    vec![0; count]
+}
+
+/// Create a vector containing the first five elements of the Fibonacci sequence.
+///
+/// Fibonacci's sequence is the list of numbers where the next number is a sum of the previous two.
+/// Its first five elements are `1, 1, 2, 3, 5`.
+pub fn fibonacci() -> Vec<u8> {
+    let mut aaa = create_buffer(5);
+    for i in 0..5 {
+        match i {
+            0 | 1 => aaa[i] = 1,
+                _ => aaa[i] = &aaa[i-1] + &aaa[i-2],
+        }
+    }
+    aaa
+}
