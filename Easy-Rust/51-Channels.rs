@@ -5,33 +5,35 @@
 
 // std::sync::mpsc -- mpsc "mutiple producer, single consumer"
 
-// pub fn channel<T>() -> (Sender<T>, Receiver<T>)
+pub fn channel<T>() -> (Sender<T>, Receiver<T>)
 
-// use std::sync::mpsc::channel;
+//---------------------------------------------------------------------------------------------
 
-// fn main() {
-//     let (sender, receiver) = channel();
+use std::sync::mpsc::channel;
 
-//     sender.send("tricao").unwrap();
-//     println!("{}", receiver.recv().unwrap()); // recv = receive, not " rec v "
-// }
+fn main() {
+    let (sender, receiver) = channel();
+
+    sender.send("tricao").unwrap();
+    println!("{}", receiver.recv().unwrap()); // recv = receive, not " rec v "
+}
 
 // a channel like Arc - can clone and send into other threads . 
 
-// use std::sync::mpsc:: channel;
-// use std::thread::spawn;
+use std::sync::mpsc:: channel;
+use std::thread::spawn;
 
-// fn main() {
-//     let (sender, receiver) = channel();
+fn main() {
+    let (sender, receiver) = channel();
 
-//     let sender_clone = sender.clone();
+    let sender_clone = sender.clone();
 
-//     spawn(move || { sender.send("Send Nguyen Cao Tri fdsssssssssssssssssssssssssssssssssssssssdsfdsfsdfsdfsd").unwrap(); });
+    spawn(move || { sender.send("Send Nguyen Cao Tri fdsssssssssssssssssssssssssssssssssssssssdsfdsfsdfsdfsd").unwrap(); });
 
-//     spawn(move || { sender_clone.send("And Send").unwrap(); });
+    spawn(move || { sender_clone.send("And Send").unwrap(); });
 
-//     println!("{:?}", receiver.recv().unwrap());
-// }
+    println!("{:?}", receiver.recv().unwrap());
+}
 
 // tuỳ vào cái nào xong trước ta có thể nhận được trước 
 
@@ -50,23 +52,23 @@
 
 // Sử dụng Join-handle để cho nó đợi  
 
-// use std::sync::mpsc:: channel;
-// use std::thread::spawn;
-// use std::vec;
+use std::sync::mpsc:: channel;
+use std::thread::spawn;
+use std::vec;
 
-// fn main() {
-//     let (sender, receiver) = channel();
+fn main() {
+    let (sender, receiver) = channel();
 
-//     let sender_clone = sender.clone();
+    let sender_clone = sender.clone();
 
-//     let mut handle_vec = vec![];
+    let mut handle_vec = vec![];
 
-//     handle_vec.push(spawn(move || { sender.send("Send Nguyen Cao Tri fdsssssssssssssssssssssssssssssssssssssssdsfdsfsdfsdfsd").unwrap(); }));
+    handle_vec.push(spawn(move || { sender.send("Send Nguyen Cao Tri fdsssssssssssssssssssssssssssssssssssssssdsfdsfsdfsdfsd").unwrap(); }));
 
-//     handle_vec.push(spawn(move || { sender_clone.send("And Send").unwrap(); }));
+    handle_vec.push(spawn(move || { sender_clone.send("And Send").unwrap(); }));
 
-//     for _ in handle_vec { println!("{:?}", receiver.recv().unwrap()); }
-// }
+    for _ in handle_vec { println!("{:?}", receiver.recv().unwrap()); }
+}
 
 //-------------------------------------------------------------------------------------------------------
 
@@ -120,3 +122,5 @@ fn main() {
         }
     }
 }
+
+
