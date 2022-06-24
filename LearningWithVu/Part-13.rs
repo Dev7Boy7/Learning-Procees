@@ -7,35 +7,35 @@
 
 // Lưu ý khi tạo thread cần chú ý vấn đề giao tiếp giữa các luồng => Thread có thể là con dao 2 lưỡi => cần lên kế hoạch sử dụng 
 
-// 
+//------------------------------------------------------------------------------------------------------------------------------------------
 
-// use std::thread::JoinHandle;
-// use std::time::Duration;
-// use std::thread;
+use std::thread::JoinHandle;
+use std::time::Duration;
+use std::thread;
 
-// fn main() {
-//     let itarations = 10;
+fn main() {
+    let itarations = 10;
 
-//     let a: JoinHandle<usize> = thread::spawn(move || {
-//         thread::sleep(Duration::from_secs(5));
-//         50
-//     });
-//     println!("waiting for data");
-//     match a.join() {
-//         Ok(value) => println!("Value: {}", value),
-//         Err(e) => println!("{:?}", e),
-//     }
+    let a: JoinHandle<usize> = thread::spawn(move || {
+        thread::sleep(Duration::from_secs(5));
+        50
+    });
+    println!("waiting for data");
+    match a.join() {
+        Ok(value) => println!("Value: {}", value),
+        Err(e) => println!("{:?}", e),
+    }
 
-//     // let b: JoinHandle<usize> = thread::spawn(move || {
-//     //     for i in 1..=10 {
-//     //         println!("{}", i)
-//     //     }
-//     // });
+    // let b: JoinHandle<usize> = thread::spawn(move || {
+    //     for i in 1..=10 {
+    //         println!("{}", i)
+    //     }
+    // });
 
-//     // a.join().unwrap();
+    // a.join().unwrap();
 
-//     // b.join().unwrap();
-// }
+    // b.join().unwrap();
+}
 
 // Bài tập :
 
@@ -81,3 +81,7 @@ fn main() {
     
     println!("{}", ccc);
 }
+
+
+
+
