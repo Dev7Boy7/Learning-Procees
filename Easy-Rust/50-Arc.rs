@@ -5,29 +5,30 @@
 
 // when 2 threads run at the same time , u could get wrong result . Example :
 
-// fn main() {
-//     let mut x = 100;
+fn main() {
+    let mut x = 100;
 
-//     for i in 0..20 { x += 1 };
-//     for i in 0..5 { x = x*2 };
+    for i in 0..20 { x += 1 };
+    for i in 0..5 { x = x*2 };
 
-//     println!("{}", x)
-// }
+    println!("{}", x)
+}
 
 // an Arc uses the processor to make sure this doesnt happen
 
 //------------------------------------------------------------------------------
 
-// fn main() {
-//     let handle = std::thread::spawn( || {
-//         println!("Working")
-//     });
+fn main() {
+    let handle = std::thread::spawn( || {
+        println!("Working")
+    });
 
-//     handle.join().unwrap();
-//     println!("End");
-// }
+    handle.join().unwrap();
+    println!("End");
+}
 
 //--------------------------------------------------------------------------------
+
 fn main() {
 
     let thread1 = std::thread::spawn(|| {
