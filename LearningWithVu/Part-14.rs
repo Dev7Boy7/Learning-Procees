@@ -12,19 +12,19 @@
 // use crossbeam_channel::unbounded;
 // use std::thread;
 
-// fn main() {
-//     let (sender, receiver) = unbounded();
+fn main() {
+    let (sender, receiver) = unbounded();
 
-//     let a = thread::spawn(move || match receiver.recv() {
-//         Ok(msg) => println!("{}", msg),
-//         Err(e) => println!("{:?}",e)
+    let a = thread::spawn(move || match receiver.recv() {
+        Ok(msg) => println!("{}", msg),
+        Err(e) => println!("{:?}",e)
         
-//     });
+    });
     
-//     sender.send("hello nguyen cao tri");
+    sender.send("hello nguyen cao tri");
 
-//     a.join();
-// }
+    a.join();
+}
 
 //--------------------------------------------------------------------------------------
 
