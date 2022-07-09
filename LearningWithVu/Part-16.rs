@@ -1,3 +1,4 @@
+
 // Rc & Arc - Reference Counter 
 
 // Rc hiểu đơn giản là chia sẻ chủ sở hữu 
@@ -32,3 +33,5 @@ fn main() {
     drop(left_door);
     println!("Right door: {:?}", right_door.vehicle);
 }
+
+
